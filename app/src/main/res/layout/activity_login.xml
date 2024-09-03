@@ -6,12 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/ingresainicio">
 
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:background="@color/morado"
+        android:background="@color/white"
         android:orientation="vertical"
         android:layout_gravity="center"
         android:layout_marginTop="200dp">
@@ -21,6 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ingresar"
             android:textSize="40sp"
+            android:textColor="@color/black"
             android:layout_gravity="center"
             android:layout_margin="20dp">
 
@@ -31,14 +33,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:background="@color/fondo"
+            android:background="@color/morado"
             android:padding="15dp"
             android:layout_marginBottom="15dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/usuario">
+                android:text="@string/usuario"
+                android:textColor="@color/white"
+                >
 
             </TextView>}
 
@@ -46,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/user"
-                android:textColor="@color/morado"
+                android:textColor="@color/white"
                 android:textSize="20sp">
 
             </EditText>
@@ -54,7 +58,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/contraseña">
+                android:text="@string/contraseña"
+                android:textColor="@color/white"
+                >
 
             </TextView>
 
@@ -62,15 +68,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/password"
-                android:textColor="@color/morado"
-                android:textSize="20sp">
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp">
 
             </EditText>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/acceder">
+                android:text="@string/acceder"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black">
 
             </Button>
 
