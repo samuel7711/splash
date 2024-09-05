@@ -6,10 +6,12 @@ import android.os.Handler;
 import android.util.Log;
 
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
+
 
     String TAG="test";
 
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
 
 
         Log.d(TAG,"Estoy en el onCreate");
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(s);
                 finish();
             }
-        },6000);
+        },2000);
 
 
         Log.d(TAG,"Estoy en el onStart");

@@ -21,7 +21,7 @@ public class registro extends AppCompatActivity {
     String TAG="test",nuevosusuarios,nuevacontrase;
     public ArrayList<String> usuarios;
     public ArrayList<String>contrase;
-    Button register;
+    Button registrar;
     EditText user, password;
 
 
@@ -31,9 +31,9 @@ public class registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
 
-        register = findViewById(R.id.register);
-        user = findViewById(R.id.user);
-        password =findViewById(R.id.password);
+        register =(Button) findViewById(R.id.register);
+        user =(EditText) findViewById(R.id.user);
+        password =(EditText) findViewById(R.id.password);
     }
 
 
@@ -41,9 +41,11 @@ public class registro extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_registro);
         Log.d(TAG,"Estoy en el onStart");
 
-        register.setOnClickListener(new View.OnClickListener() {
+        registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 nuevosusuarios = user.getText().toString();
