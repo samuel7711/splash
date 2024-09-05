@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -29,62 +29,65 @@
 
         </TextView>
 
-        <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:background="@drawable/bordes2"
-            android:padding="15dp"
-            android:layout_marginBottom="15dp">
-
-            <TextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="@string/usuario"
-                android:textColor="@color/white"
-                >
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:background="@drawable/bordes3"
+                android:padding="15dp"
+                android:layout_marginBottom="15dp">
 
-            </TextView>}
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/usuario"
+                    android:textColor="@color/white"
+                    >
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/user"
-                android:textColor="@color/white"
-                android:textSize="20sp">
+                </TextView>
 
-            </EditText>
+                <EditText
+                    android:id="@+id/user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user"
+                    android:textColor="@color/white"
+                    android:textSize="20sp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/contraseña"
-                android:textColor="@color/white"
-                >
+                </EditText>
 
-            </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contraseña"
+                    android:textColor="@color/white"
+                    >
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/password"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:layout_marginBottom="20dp">
+                </TextView>
 
-            </EditText>
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="20dp">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/registro"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black">
+                </EditText>
 
-            </Button>
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registro"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black">
 
-        </LinearLayout>
+                </Button>
+
+            </LinearLayout>
 
     </LinearLayout>
 

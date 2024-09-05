@@ -2,15 +2,17 @@ package com.szs.entrega2;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class inicio extends AppCompatActivity {
 
+    Button boton1, boton2;
     String TAG="test";
 
 
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        boton1 =findViewById(R.id.boton1);
+        boton2 =findViewById(R.id.boton2);
 
         Log.d(TAG,"Estoy en el onCreate");
     }
@@ -27,15 +31,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        new Handler().postDelayed(new Runnable() {
+        boton1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                Intent s = new Intent(MainActivity.this, inicio.class);
-                startActivity(s);
-                finish();
-            }
-        },6000);
+            public void onClick(View view) {
+                Intent splash = new Intent(inicio.this, login.class);
+                startActivity(splash);
 
+            }
+        });
+
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent r = new Intent(inicio.this, registro.class);
+                startActivity(r);
+            }
+
+
+        });
 
         Log.d(TAG,"Estoy en el onStart");
     }

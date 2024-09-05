@@ -39,37 +39,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center">
-
-        <Button
-            android:id="@+id/boton1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/morado"
-            android:shadowRadius="@color/black"
-            android:text="Ingresar"
-            android:layout_marginRight="15dp">
-
-        </Button>
-
-        <Button
-            android:id="@+id/boton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/morado"
-            android:shadowRadius="@color/black"
-            android:text="Ingresar"
-            android:layout_marginLeft="15dp">
-
-        </Button>
-
-    </LinearLayout>
 
 
 
