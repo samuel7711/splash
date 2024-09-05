@@ -20,25 +20,21 @@ public class inicio extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_inicio);
 
-        boton1 =findViewById(R.id.boton1);
-        boton2 =findViewById(R.id.boton2);
+        boton1 = (Button) findViewById(R.id.boton1);
+        boton2 =(Button)findViewById(R.id.boton2);
 
         Log.d(TAG,"Estoy en el onCreate");
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
 
         boton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent splash = new Intent(inicio.this, login.class);
                 startActivity(splash);
-
             }
         });
+
 
         boton2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +45,13 @@ public class inicio extends AppCompatActivity {
 
 
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
 
         Log.d(TAG,"Estoy en el onStart");
     }
