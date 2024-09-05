@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".login"
     android:orientation="vertical"
-    android:background="@drawable/dragradadoregistro">
+    android:background="@drawable/espacio">
 
     <LinearLayout
         android:layout_width="300dp"
