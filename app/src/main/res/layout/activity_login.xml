@@ -7,15 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".login"
     android:orientation="vertical"
-    android:background="@color/ingresainicio">
+    android:background="@drawable/degrado">
 
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/bordes"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp">
+        android:layout_marginTop="200dp"
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,7 +34,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:background="@color/morado"
+            android:background="@drawable/bordes2"
             android:padding="15dp"
             android:layout_marginBottom="15dp">
 
