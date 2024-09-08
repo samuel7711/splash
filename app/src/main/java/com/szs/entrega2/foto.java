@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -22,24 +24,41 @@ public class foto extends AppCompatActivity {
 
     String TAG="test";
     ImageView ImageView;
+    TextView viewnombre;
+    String[] datos = new String[2];
+    Users user;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-
         setContentView(R.layout.activity_foto);
-        ImageView =(ImageView) findViewById(R.id.ImageView);
-        Intent f = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(f,0);
+
+        ImageView = findViewById(R.id.ImageView);
+        viewnombre = findViewById(R.id.viewnombre);
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        datos = bundle.getStringArray("key");
+
+
+        user = new Users(datos[0],datos[1]);
+        viewnombre.setText(user.User);
+
+        ImageView.setOnClickListener(view -> {
+            Intent f = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(f,0);
+        });
+
+
 
     }
 
     @Override
 
     public void  onActivityResult(int requestCode, int resultCode,@Nullable Intent data){
-        super.onActivityResult(requestCode,resultCode,data);
+        super.onActivityResult(requestCode, resultCode, data);
         Bitmap bitmap =(Bitmap) data.getExtras().get("data");
         ImageView.setImageBitmap(bitmap);
     };

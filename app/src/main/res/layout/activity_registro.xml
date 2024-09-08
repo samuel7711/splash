@@ -51,7 +51,7 @@
                     android:id="@+id/user"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/user"
+                    android:text="u"
                     android:textColor="@color/white"
                     android:textSize="20sp">
 
@@ -70,7 +70,7 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/password"
+                    android:text="p"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:layout_marginBottom="20dp">

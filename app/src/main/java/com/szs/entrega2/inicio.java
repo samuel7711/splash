@@ -27,6 +27,7 @@ public class inicio extends AppCompatActivity {
         boton1 = (Button) findViewById(R.id.boton1);
         boton2 =(Button)findViewById(R.id.boton2);
 
+
         Log.d(TAG,"Estoy en el onCreate");
 
         boton1.setOnClickListener(new View.OnClickListener() {
