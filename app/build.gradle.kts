@@ -47,7 +47,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
     implementation ("com.airbnb.android:lottie:6.4.0")
+    implementation ("com.mikhaellopez:circularimageview:4.3.1")
 
 }
