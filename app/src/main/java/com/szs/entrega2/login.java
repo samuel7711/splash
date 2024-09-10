@@ -30,14 +30,17 @@ public class login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        login = (Button) findViewById(R.id.login);
-        userr =(EditText) findViewById(R.id.userr);
-        pass =(EditText) findViewById(R.id.pass);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+
+
+        login = (Button) findViewById(R.id.login);
+        userr =(EditText) findViewById(R.id.userr);
+        pass =(EditText) findViewById(R.id.pass);
+
         Log.d(TAG,"Estoy en el onStart");
         user = new Users("admin","admin");
 

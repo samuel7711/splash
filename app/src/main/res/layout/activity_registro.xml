@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login"
+    tools:context=".registro"
     android:orientation="vertical"
     android:background="@drawable/espacio">
 
@@ -64,7 +64,6 @@
                     android:id="@+id/user"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="u"
                     android:textColor="@color/white"
                     android:textSize="20sp">
 
@@ -83,7 +82,6 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="p"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:layout_marginBottom="20dp">
@@ -91,13 +89,12 @@
                 </EditText>
 
                 <Button
-                    android:id="@+id/registrar"
+                    android:id="@+id/res"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/registro"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black">
-
                 </Button>
 
             </LinearLayout>

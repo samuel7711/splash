@@ -20,32 +20,15 @@ public class registro extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_registro);
 
-        registrar =(Button) findViewById(R.id.registrar);
-        user =(EditText) findViewById(R.id.user);
-        password =(EditText) findViewById(R.id.password);
+
     }
-
-    private void regis(){
-        if (user.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
-            Toast.makeText(this,"Completa los campos", Toast.LENGTH_SHORT).show();
-        }else{
-            datos[0]=user.getText().toString();
-            datos[1]=password.getText().toString();
-
-            Intent i = new Intent(registro.this, login.class);
-            Bundle bundle = new Bundle();
-            bundle.putStringArray("Key",datos);
-            i.putExtras(bundle);
-            setResult(RESULT_OK, i);
-            finish();
-        }
-    };
 
     @Override
     protected void onStart() {
@@ -54,22 +37,38 @@ public class registro extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
         Log.d(TAG,"Estoy en el onStart");
 
-        registrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        registrar = findViewById(R.id.res);
 
-                regis();
-
-                user.setText("");
-                password.setText("");
-
-                Intent l = new Intent(registro.this, login.class);
-                startActivity(l);
-            }
+        registrar.setOnClickListener(view -> {
+            regis();
         });
 
     }
 
+    private void regis(){
+
+        user = findViewById(R.id.user);
+        password = findViewById(R.id.password);
+
+        if (user.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
+            Toast.makeText(this,"Completa los campos", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            datos[0]=user.getText().toString();
+            datos[1]=password.getText().toString();
+
+            user.setText("");
+            password.setText("");
+
+            Intent i = new Intent(registro.this, login.class);
+            Bundle bundle = new Bundle();
+            bundle.putStringArray("Key",datos);
+            i.putExtras(bundle);
+            setResult(RESULT_OK,i);
+            startActivity(i);
+
+        }
+    };
 
     @Override
     protected void onStop() {
