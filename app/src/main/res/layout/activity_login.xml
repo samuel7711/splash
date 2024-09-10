@@ -57,7 +57,6 @@
                 android:id="@+id/userr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="u"
                 android:textColor="@color/white"
                 android:textSize="20sp">
 
@@ -77,7 +76,6 @@
                 android:id="@+id/pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="p"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:layout_marginBottom="15dp">
@@ -98,7 +96,7 @@
                 android:id="@+id/registrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/acceder"
+                android:text="@string/registro"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/black">
 
