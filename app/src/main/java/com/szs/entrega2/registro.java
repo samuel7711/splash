@@ -61,11 +61,9 @@ public class registro extends AppCompatActivity {
             password.setText("");
 
             Intent i = new Intent(registro.this, login.class);
-            Bundle bundle = new Bundle();
-            bundle.putStringArray("Key",datos);
-            i.putExtras(bundle);
+            i.putExtra("key",datos);
             setResult(RESULT_OK,i);
-            startActivity(i);
+            finish();
 
         }
     };

@@ -18,7 +18,8 @@ import java.util.Objects;
 public class login extends AppCompatActivity {
 
     String TAG="test",strU,strP;
-    Button login;
+    Button login, registrar ;
+
     EditText userr,pass;
     String[] datos = new String[2];
     Users user;
@@ -30,7 +31,11 @@ public class login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
+
+
     }
+
+
 
     @Override
     protected void onStart() {
@@ -40,9 +45,19 @@ public class login extends AppCompatActivity {
         login = (Button) findViewById(R.id.login);
         userr =(EditText) findViewById(R.id.userr);
         pass =(EditText) findViewById(R.id.pass);
+        registrar = findViewById(R.id.registrar);
 
         Log.d(TAG,"Estoy en el onStart");
         user = new Users("admin","admin");
+
+        registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Iniciar la actividad de registro esperando resultado
+                Intent intent = new Intent(login.this, registro.class);
+                startActivityForResult(intent, 1);  // Usar startActivityForResult()
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,16 +82,14 @@ public class login extends AppCompatActivity {
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==1 && resultCode==RESULT_OK && data!=null){
-            Bundle bundle = data.getExtras();
-            if(bundle!=null) {
+            datos = data.getStringArrayExtra("key");
+            if(datos!=null) {
                 //Asignacion de variables
-                datos = bundle.getStringArray("key");
-
-                user.User = datos[0];
-                user.Pass = datos[1];
+                    user.User = datos[0];
+                    user.Pass = datos[1];
             }
         }
     }
